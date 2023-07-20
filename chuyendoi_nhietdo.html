@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<h1>Temperature Converter</h1>
+<p>Nhập độ F vào bên dưới!</p>
+<p>
+    <label for="f">ĐỘ F :</label>
+    <input id="f" type="number" onchange="convert(this.value)">
+</p>
+<p id="c"></p>
+</body>
+<script>
+    function convert(f) {
+        let newf = parseFloat(f);
+        document.getElementById("c").innerHTML = `ĐỘ C: ${(newf-32)/1.8}`;
+    }
+</script>
+</html>

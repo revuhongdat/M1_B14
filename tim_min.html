@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+</body>
+<script>
+    function timmin(ar) {
+        let index = -1;
+        if (ar.length === 0 ) {
+            return -1;
+        } else {
+            let min = ar[0];
+            for (let i = 0; i < ar.length; i++) {
+                if (ar[i] <= min) {
+                    min = ar[i];
+                    index = i ;
+                }
+            }
+            return index;
+        }
+    }
+    let ar1 = [2,3,4,6,1,-2,-1,2,4];
+    let min_index = timmin(ar1);
+    if (min_index === -1) {
+        alert("Mảng rỗng")
+    } else {
+        alert(`Mảng có giá trị nhỏ nhất là ${ar1[min_index]} ở vị trí ${min_index}.`)
+    }
+</script>
+</html>
